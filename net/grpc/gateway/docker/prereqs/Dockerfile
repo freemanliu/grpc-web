@@ -41,8 +41,8 @@ RUN wget -nv -O buildifier \
 # Download third_party modules to be used for the next stage
 WORKDIR /github/grpc-web
 
-RUN git clone https://github.com/freemanliu/grpc-web.git
-COPY ./scripts/init_submodules.sh ./scripts/
+RUN git clone https://github.com/freemanliu/grpc-web.git .
+# COPY ./scripts/init_submodules.sh ./scripts/
 RUN ./scripts/init_submodules.sh
 
 
